@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+import { navigate } from 'react'
 
 export default function Venues () {
 
   const showVenues = (venue) => {
 
-    // navigate(`${venue.name}`)
+    navigate(`${venue.name}`)
   }
 
   const [venues, setVenues] = useState(null)
@@ -13,7 +14,8 @@ export default function Venues () {
 useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get('http://localhost:8000/')
-  console.log(response.data[0].name)
+  // console.log(response.data)
+  // console.log(response.data[0].events[0])
   setVenues(response.data)
 
   }
@@ -35,9 +37,13 @@ if(!venues) {
       {
       venues.map((venues)=>(
       <div onClick={() => showVenues(venues)} key={venues.name}
-      className='cardNoImg'>
+      className='card'>
       <div className="previewText">
+      <img className="Img" src={`${venues.photo_url}`}  />
       <h2>{venues.name}</h2>
+      <h3>{venues.location}</h3>
+      <h3>{venues.capacity}</h3>
+      {/* <h3>Upcoming Event: {venues.events[0]}</h3> */}
       </div>
       </div>
       ))}
