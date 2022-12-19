@@ -31,13 +31,13 @@ if(!venues) {
   return(
     <div className='container'>
     <div className="title">
-      <h1>Venues!</h1>
+      <h1> Venues!</h1>
     </div>
     <div className='grid'>
       {
       venues.map((venues)=>(
-      <div onClick={() => showVenues(venues)} key={venues.name}
-      className='card'>
+      <div  onClick={() => showVenues(venues)} key={venues.name}
+      className='cardNoImg'>
       <div className="previewText">
       <img className="Img" src={`${venues.photo_url}`}  />
       <h2>{venues.name}</h2>

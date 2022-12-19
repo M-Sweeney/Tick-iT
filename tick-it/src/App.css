@@ -1,5 +1,18 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+body{
+    text-align: center;
+    font-family: 'Roboto Condensed';
+}
 
 img{
   max-height: 300px;
+}
+.grid {
+    display: grid; 
+     grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+    padding: 0.5em;
+}
+.cardNoImg{
+    border: 3px solid black;
+    border-radius: 30px;
 }
