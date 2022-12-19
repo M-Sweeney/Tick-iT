@@ -1,10 +1,10 @@
 import axios from 'axios'
-// import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import {useEffect, useState} from 'react'
 
 export default function Events () {
 
-  // let { id } = useParams()
+  let { id } = useParams()
 
   const showEvent = (event) => {
 

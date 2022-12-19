@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Venues () {
 
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
 
   const showVenues = (venue) => {
 
-    // navigate(`/venues/${venue.id}`)
+    navigate(`/venues/${venue.id}`)
   }
 
   const [venues, setVenues] = useState(null)
