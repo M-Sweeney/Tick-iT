@@ -19,6 +19,6 @@ img{
 }
 
 .cardNoImg:hover{
-    background-color: aqua;
+    background-color: white;
     transform: scale(1.1);
 }
