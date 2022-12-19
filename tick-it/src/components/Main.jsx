@@ -7,7 +7,7 @@ export default function Main () {
 return (
 <div>
 <Routes>
-  <Route path ="/venues/1" element={<Events/>}/>
+  <Route path ="/venues/:id" element={<Events/>}/>
 </Routes>
 </div>
 )
