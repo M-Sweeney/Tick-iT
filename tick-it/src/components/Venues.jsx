@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import { navigate } from 'react'
+// import { useNavigate } from 'react-router-dom'
 
 export default function Venues () {
 
+  // let navigate = useNavigate()
+
   const showVenues = (venue) => {
 
-    navigate(`${venue.name}`)
+    // navigate(`/venues/${venue.id}`)
   }
 
   const [venues, setVenues] = useState(null)
@@ -31,13 +33,13 @@ if(!venues) {
   return(
     <div className='container'>
     <div className="title">
-      <h1> Venues!</h1>
+      <h1>Venues!</h1>
     </div>
     <div className='grid'>
       {
       venues.map((venues)=>(
-      <div  onClick={() => showVenues(venues)} key={venues.name}
-      className='cardNoImg'>
+      <div onClick={() => showVenues(venues)} key={venues.name}
+      className='card'>
       <div className="previewText">
       <img className="Img" src={`${venues.photo_url}`}  />
       <h2>{venues.name}</h2>
