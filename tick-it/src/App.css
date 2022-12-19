@@ -25,3 +25,8 @@ img{
     background-color: white;
     transform: scale(1.1);
 }
+
+.previewText:hover{
+    cursor: pointer;
+
+}
