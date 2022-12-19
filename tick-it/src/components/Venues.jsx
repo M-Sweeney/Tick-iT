@@ -10,7 +10,7 @@ export default function Venues () {
     navigate(`/venues/${venue.id}`)
     window.location.reload()
   }
-  
+
   const [venues, setVenues] = useState(null)
 
 useEffect(()=>{
@@ -43,7 +43,6 @@ if(!venues) {
       <h2>{venues.name}</h2>
       <h3>{venues.location}</h3>
       <h3>{venues.capacity}</h3>
-      {/* <h3>Upcoming Event: {venues.events[0]}</h3> */}
       </div>
       </div>
       ))}
