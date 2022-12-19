@@ -1,19 +1,20 @@
+import { useState, useEffect } from "react"
 import axios from 'axios'
-import {useState, useEffect} from 'react'
+
 export default function Venues () {
 
-  const showVenue = (venue) => {
+  const showVenues = (venue) => {
 
+    // navigate(`${venue.name}`)
   }
+
   const [venues, setVenues] = useState(null)
-  
 
 useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get('http://localhost:8000/')
-
-  console.log(response.data)
-  setVenues(response.data.venues)
+  console.log(response.data[0].name)
+  setVenues(response.data)
 
   }
 
@@ -30,18 +31,17 @@ if(!venues) {
     <div className="title">
       <h1>Venues!</h1>
     </div>
-    {/* <div className='grid'>
+    <div className='grid'>
       {
-      venues.map((venue)=>(
-      <div onClick={() => showVenue(venue)} key={venue.}
-      className='card'>
-      <img className="preview" src={`${venue.}/preview`}  />
+      venues.map((venues)=>(
+      <div onClick={() => showVenues(venues)} key={venues.name}
+      className='cardNoImg'>
       <div className="previewText">
-      <h2>{venue.}</h2>
+      <h2>{venues.name}</h2>
       </div>
       </div>
       ))}
-    </div> */}
+    </div>
     </div>
   )
 }}
