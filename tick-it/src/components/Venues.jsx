@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import {useState, useEffect} from 'react'
 export default function Venues () {
 
   const showVenue = (venue) => {
@@ -10,8 +10,9 @@ export default function Venues () {
 
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get('')
+  const response = await axios.get('http://localhost:8000/')
 
+  console.log(response.data)
   setVenues(response.data.venues)
 
   }
@@ -29,7 +30,7 @@ if(!venues) {
     <div className="title">
       <h1>Venues!</h1>
     </div>
-    <div className='grid'>
+    {/* <div className='grid'>
       {
       venues.map((venue)=>(
       <div onClick={() => showVenue(venue)} key={venue.}
@@ -40,7 +41,7 @@ if(!venues) {
       </div>
       </div>
       ))}
-    </div>
+    </div> */}
     </div>
   )
 }}
