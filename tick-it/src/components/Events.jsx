@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {useEffect, useState} from 'react'
 
 export default function Events () {
 
@@ -10,9 +11,10 @@ export default function Events () {
 
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get('')
+  const response = await axios.get('http://localhost:8000/venues/1')
 
-  setEvent(response.data.event)
+  console.log(response.data)
+  setEvent(response.data.events)
 
   }
 
@@ -31,12 +33,14 @@ if(!event) {
     </div>
     <div className='grid'>
       {
-      event.map((event)=>(
-      <div onClick={() => showEvent(event)} key={event.}
-      className='card'>
-      <img className="preview" src={`${event.}/preview`}  />
+      event.map((events)=>(
+      <div onClick={() => showEvent(events)} key={events.events}
+      className='cardNoImg'>
       <div className="previewText">
-      <h2>{event.}</h2>
+      <h2>{events.name}</h2>
+      <h2>{events.date}</h2>
+      <h2>{events.description}</h2>
+      <h2>$ {events.price}</h2>
       </div>
       </div>
       ))}
@@ -44,5 +48,6 @@ if(!event) {
     </div>
   )
 }}
+
 
 
