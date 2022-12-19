@@ -7,17 +7,15 @@ export default function Venues () {
   let navigate = useNavigate()
 
   const showVenues = (venue) => {
-
     navigate(`/venues/${venue.id}`)
+    window.location.reload()
   }
-
+  
   const [venues, setVenues] = useState(null)
 
 useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get('http://localhost:8000/')
-  // console.log(response.data)
-  // console.log(response.data[0].events[0])
   setVenues(response.data)
 
   }

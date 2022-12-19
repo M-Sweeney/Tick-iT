@@ -6,9 +6,7 @@ export default function Events () {
 
   let { id } = useParams()
 
-  const showEvent = (event) => {
 
-  }
   const [event, setEvent] = useState(null)
   
 
@@ -37,8 +35,7 @@ if(!event) {
     <div className='grid'>
       {
       event.map((events)=>(
-      <div onClick={() => showEvent(events)} key={events.events}
-      className='cardNoImg'>
+      <div className='cardNoImg'>
       <div className="previewText">
       <h2>{events.name}</h2>
       <h2>{events.date}</h2>
