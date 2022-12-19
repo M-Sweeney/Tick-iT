@@ -6,9 +6,9 @@ export default function Main () {
 
 return (
 <div>
-{/* <Routes>
+<Routes>
   <Route path ="/venues/1" element={<Events/>}/>
-</Routes> */}
+</Routes>
 </div>
 )
 }
