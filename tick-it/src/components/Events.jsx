@@ -1,7 +1,10 @@
 import axios from 'axios'
+// import { useParams } from "react-router-dom"
 import {useEffect, useState} from 'react'
 
 export default function Events () {
+
+  // let { id } = useParams()
 
   const showEvent = (event) => {
 
@@ -11,9 +14,9 @@ export default function Events () {
 
 useEffect(()=>{
   const getData = async () =>{
-  const response = await axios.get('http://localhost:8000/venues/1')
+  const response = await axios.get(`http://localhost:8000/venues/1`)
 
-  console.log(response.data)
+  // console.log(response.data)
   setEvent(response.data.events)
 
   }
