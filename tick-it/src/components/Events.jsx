@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useParams } from "react-router-dom"
 import {useEffect, useState} from 'react'
+import Venues from './Venues'
 
 export default function Events () {
 
@@ -8,13 +9,15 @@ export default function Events () {
 
 
   const [event, setEvent] = useState(null)
+  const [venueName, setVenueName] = useState('') 
+
   
 
 useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get(`http://localhost:8000/venues/${id}`)
 
-  // console.log(response.data)
+  setVenueName(response.data.name)
   setEvent(response.data.events)
 
   }
@@ -30,7 +33,7 @@ if(!event) {
   return(
     <div className='container'>
     <div className="title">
-      <h1>Events!</h1>
+      <h1>Events at {venueName}!</h1>
     </div>
     <div className='grid'>
       {
@@ -48,6 +51,4 @@ if(!event) {
     </div>
   )
 }}
-
-
 
