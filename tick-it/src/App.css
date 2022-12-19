@@ -2,6 +2,7 @@
 body{
     text-align: center;
     font-family: 'Roboto Condensed';
+    background-color: #9AB0A6;
 }
 
 img{
@@ -29,4 +30,11 @@ img{
 .previewText:hover{
     cursor: pointer;
 
+}
+
+.title{
+    color: #518394;
+}
+.header{
+    color: #518394;
 }
