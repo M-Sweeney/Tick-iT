@@ -43,6 +43,10 @@ img{
 .header{
     color: #64798C;
 }
+.Tik-It:hover{
+    cursor: pointer;
+    color: white;
+}
 .venues{
     color: #64798C;
 }
