@@ -1,12 +1,18 @@
 import axios from 'axios'
 import { useParams } from "react-router-dom"
 import {useEffect, useState} from 'react'
-import Venues from './Venues'
+import { useNavigate } from 'react-router-dom'
 
 export default function Events () {
 
   let { id } = useParams()
 
+  let navigate = useNavigate()
+
+  const showEvent = (events) => {
+
+    navigate(`/events/${id}`)
+  }
 
   const [event, setEvent] = useState(null)
   const [venueName, setVenueName] = useState('') 
@@ -38,7 +44,7 @@ if(!event) {
     <div className='grid'>
       {
       event.map((events)=>(
-      <div className='cardNoImg'>
+      <div onClick={() => showEvent(id)}  className='cardNoImg'>
       <div className="previewText">
       <h2>{events.name}</h2>
       <h2>{events.date}</h2>
