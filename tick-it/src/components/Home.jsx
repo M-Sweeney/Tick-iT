@@ -8,7 +8,6 @@ export default function Venues () {
 
   const showVenues = (venue) => {
     navigate(`/venues/${venue.id}`)
-    window.location.reload()
   }
 
   const [venues, setVenues] = useState(null)
