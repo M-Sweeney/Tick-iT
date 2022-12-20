@@ -9,7 +9,7 @@ export default function Events () {
 
   let navigate = useNavigate()
 
-  const showEvent = (events) => {
+  const showEvent = (id) => {
 
     navigate(`/events/${id}`)
   }
@@ -44,7 +44,7 @@ if(!event) {
     <div className='grid'>
       {
       event.map((events)=>(
-      <div onClick={() => showEvent(id)}  className='cardNoImg'>
+      <div onClick={() => showEvent(events.id)}  className='cardNoImg'>
       <div className="previewText">
       <h2>{events.name}</h2>
       <h2>{events.date}</h2>

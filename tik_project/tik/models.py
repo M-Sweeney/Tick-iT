@@ -22,5 +22,6 @@ class Event(models.Model):
     is_sold_out = models.BooleanField()
 
 
+
     def __str__(self):
         return self.name
