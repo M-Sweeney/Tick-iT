@@ -7,7 +7,7 @@ export default function EventDetails () {
   let { id } = useParams()
 
   const [event, setEvent] = useState(null)
-
+  const [eventLink, setEventLink] = useState('')
 
 useEffect(()=>{
   const getData = async () =>{
@@ -16,6 +16,8 @@ useEffect(()=>{
   console.log(response.data.name)
   console.log(response.data)
   setEvent(response.data)
+  setEventLink(response.data.link)
+  console.log(response.data.link)
   console.log(event.name)
 
   }
@@ -38,7 +40,9 @@ if(!event) {
       <h2>{event.date}</h2>
       <h2>{event.description}</h2>
       <h2>$ {event.price}</h2>
-      <button className='purchaseButton'>Purchase Tickets</button>
+      <a href={eventLink} target='_blank'>
+      <button>Purchase Tickets</button>
+    </a>
       </div>
       
     </div>
