@@ -54,6 +54,7 @@ body{
 
 .detailsTitle{
     font-size: 50px;
+    width: 100vw;
     margin: -1em;
 }
 
