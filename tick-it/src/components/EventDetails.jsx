@@ -14,6 +14,7 @@ useEffect(()=>{
   const response = await axios.get(`http://localhost:8000/events/${id}`)
 
   console.log(response.data.name)
+  console.log(response.data)
   setEvent(response.data)
   console.log(event.name)
 
@@ -32,7 +33,7 @@ if(!event) {
     <div className="detailsTitle">
       <h1>{event.name}!</h1>
     </div>
-      
+      <img src={event.photo_url} />
       <div className=''>
       <h2>{event.date}</h2>
       <h2>{event.description}</h2>
