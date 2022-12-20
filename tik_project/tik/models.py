@@ -15,11 +15,13 @@ class Venue(models.Model):
 
 class Event(models.Model):
     venue = models.ForeignKey(Venue, on_delete=models.CASCADE, related_name='events')
+    photo_url = models.URLField(null=True)
     name = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
     date = models.CharField(max_length=100)
     is_sold_out = models.BooleanField()
+    link = models.CharField(max_length=200, default="")
 
 
 
