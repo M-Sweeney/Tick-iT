@@ -33,7 +33,7 @@ if(!event) {
     <div className="detailsTitle">
       <h1>{event.name}!</h1>
     </div>
-      <img src={event.photo_url} />
+      <img className='ImgDetail'src={event.photo_url} />
       <div className=''>
       <h2>{event.date}</h2>
       <h2>{event.description}</h2>
