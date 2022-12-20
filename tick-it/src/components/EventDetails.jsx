@@ -13,12 +13,8 @@ useEffect(()=>{
   const getData = async () =>{
   const response = await axios.get(`http://localhost:8000/events/${id}`)
 
-  console.log(response.data.name)
-  console.log(response.data)
   setEvent(response.data)
   setEventLink(response.data.link)
-  console.log(response.data.link)
-  console.log(event.name)
 
   }
 
