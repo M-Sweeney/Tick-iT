@@ -28,16 +28,16 @@ if(!event) {
   return <h2>Loading Events</h2>
 }else{
   return(
-    <div className='container'>
-    <div className="title">
+    <div className='detailsContainer'>
+    <div className="detailsTitle">
       <h1>{event.name}!</h1>
     </div>
       
-      <div className='cardNoImg'>
-      <h2>{event.name}</h2>
+      <div className=''>
       <h2>{event.date}</h2>
       <h2>{event.description}</h2>
       <h2>$ {event.price}</h2>
+      <button className='purchaseButton'>Purchase Tickets</button>
       </div>
       
     </div>
