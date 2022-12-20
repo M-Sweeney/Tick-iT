@@ -29,7 +29,6 @@ img{
     background-color: white;
     transform: scale(1.1);
     border: 3px solid black;
-
 }
 
 .previewText:hover{
@@ -49,4 +48,26 @@ img{
 }
 .venues{
     color: #64798C;
+}
+
+.detailsContainer{
+    padding-top: 1in;
+}
+
+.detailsTitle{
+    font-size: 50px;
+}
+
+.purchaseButton{
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.purchaseButton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Tik-It{
+    font-size: 60px;
 }
