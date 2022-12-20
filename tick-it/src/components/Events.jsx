@@ -25,6 +25,7 @@ useEffect(()=>{
 
   setVenueName(response.data.name)
   setEvent(response.data.events)
+  console.log(response.data)
 
   }
 
