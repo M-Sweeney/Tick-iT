@@ -31,7 +31,7 @@ if(!venues) {
   return(
     <div className='container'>
     <div className="title">
-      <h1>Venues!</h1>
+      <h1 className="venues">Venues!</h1>
     </div>
     <div className='grid'>
       {
